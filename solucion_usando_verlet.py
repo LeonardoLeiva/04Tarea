@@ -23,7 +23,7 @@ y[0]=condicion_inicial[1]
 E[0]=Aiur.energia_total()
 
 for n in range(1,N):
-    Aiur.avanza_euler(dt)
+    Aiur.avanza_verlet(dt)
     x[n]=Aiur.y_actual[0]
     y[n]=Aiur.y_actual[1]
     E[n]=Aiur.energia_total()
