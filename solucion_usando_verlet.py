@@ -29,7 +29,7 @@ for n in range(1,N):
     E[n]=Shakuras.energia_total()
 print t
 print x
-
+print E
 
 ax1=fig.add_subplot(211)
 ax1.plot(x,y)
