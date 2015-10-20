@@ -9,11 +9,12 @@ fig=plt.figure()
 fig.clf()
 
 condicion_inicial = [10, 0, 0, 0.25]
+alpha = 10**(-2.622) #RUT: 18.668.622-5
 
-Shakuras = Planeta(condicion_inicial)
+Shakuras = Planeta(condicion_inicial, alpha)
 N=3*np.int(1e4)
-dt=1000./N
-t=np.linspace(0,1000,N)
+dt=7000./N
+t=np.linspace(0,7000,N)
 x=np.zeros(N)
 y=np.zeros(N)
 E=np.zeros(N)
@@ -27,8 +28,6 @@ for n in range(1,N):
     x[n]=Shakuras.y_actual[0]
     y[n]=Shakuras.y_actual[1]
     E[n]=Shakuras.energia_total()
-print t
-print x
 
 
 ax1=fig.add_subplot(211)

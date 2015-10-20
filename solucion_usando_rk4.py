@@ -8,12 +8,12 @@ import matplotlib.pyplot as plt
 fig=plt.figure()
 fig.clf()
 
-condicion_inicial = [10, 0, 0, 0.3]
+condicion_inicial = [10, 0, 0, 0.25]
 
 Aiur = Planeta(condicion_inicial)
 N=3*np.int(1e4)
-dt=200./N
-t=np.linspace(0,200,N)
+dt=1000./N
+t=np.linspace(0,1000,N)
 x=np.zeros(N)
 y=np.zeros(N)
 E=np.zeros(N)

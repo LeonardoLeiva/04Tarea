@@ -8,25 +8,25 @@ import matplotlib.pyplot as plt
 fig=plt.figure()
 fig.clf()
 
-condicion_inicial = [10, 0, 0, 0.3]
+condicion_inicial = [10, 0, 0, 0.25]
 
-Aiur = Planeta(condicion_inicial)
+Mar_Sara = Planeta(condicion_inicial)
 N=3*np.int(1e4)
 dt=1000./N
-t=np.linspace(0,2000,N)
+t=np.linspace(0,1000,N)
 x=np.zeros(N)
 y=np.zeros(N)
 E=np.zeros(N)
 
 x[0]=condicion_inicial[0]
 y[0]=condicion_inicial[1]
-E[0]=Aiur.energia_total()
+E[0]=Mar_Sara.energia_total()
 
 for n in range(1,N):
-    Aiur.avanza_euler(dt)
-    x[n]=Aiur.y_actual[0]
-    y[n]=Aiur.y_actual[1]
-    E[n]=Aiur.energia_total()
+    Mar_Sara.avanza_euler(dt)
+    x[n]=Mar_Sara.y_actual[0]
+    y[n]=Mar_Sara.y_actual[1]
+    E[n]=Mar_Sara.energia_total()
 print t
 print x
 
