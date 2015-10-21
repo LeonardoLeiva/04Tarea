@@ -1,6 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+'''
+Resolucion del problema con alpha distinto de 0. Ademas agrega un metodo para
+calcular la velocidad angular
+'''
+
 from __future__ import division
 from planeta import Planeta
 import numpy as np
@@ -32,6 +37,7 @@ r[0] = x[0]** 2 + y[0]** 2
 #phi[0] = np.arctan(y[0]/ x[0])
 
 '''
+#codigo fallido
 for n in range (1,590) :
     Shakuras.avanza_verlet(dt)
     x[n]=Shakuras.y_actual[0]
@@ -63,6 +69,8 @@ for n in range(1,N): #530 corresponde a una orbita, aproximadamente
     y[n]=Shakuras.y_actual[1]
     E[n]=Shakuras.energia_total()
     r[n] = x[n]** 2 + y[n]** 2
+
+#listas para indexar algunos valores que se iran obteniendo
 
 xm = []
 ym = []

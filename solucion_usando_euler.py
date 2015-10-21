@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+'''
+Programa que plotea las orbitas de un planeta. El metodo usado es euler
+'''
+
 from planeta import Planeta
 import numpy as np
 import matplotlib.pyplot as plt

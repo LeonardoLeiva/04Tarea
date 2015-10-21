@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+'''
+Programa que plotea las orbitas de un planeta. El metodo usado es runge kutta 4
+'''
 
 from planeta import Planeta
 import numpy as np
@@ -10,7 +13,7 @@ fig.clf()
 
 condicion_inicial = [10, 0, 0, 0.25]
 
-Aiur = Planeta(condicion_inicial)
+Aiur = Planeta(condicion_inicial) #un planeta muy importante
 N=3*np.int(1e4)
 dt=1000./N
 t=np.linspace(0,1000,N)
