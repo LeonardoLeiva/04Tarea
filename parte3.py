@@ -14,7 +14,7 @@ alpha = 10**(-2.622) #RUT: 18.668.622-5
 
 Shakuras = Planeta(condicion_inicial, alpha)
 N=3*np.int(1e4)
-tf=3690. #tf=124 da una vuelta
+tf=3690. #tf=123 - 124 da una vuelta
 dt=tf/N
 t=np.linspace(0,tf,N)
 x=np.zeros(N)
@@ -83,17 +83,16 @@ for i in range(1,30):
     xm.append(a[n])
     ym.append(b[n])
     tm.append(d[n])
-    p = np.arctan(a[n]/ (float)(b[n]))
+    p = np.arctan(a[n]/ (b[n]))
     phi.append(p)
     if i>=2:
         dphi = phi[i-1] - phi[i-2]
-        dt = t[i] - t[i-1]
+        dt = tm[i-1] - tm[i-2]
         wi = dphi/ dt
         w.append(wi)
 
-W = np.mean(w)
+W = np.mean(w) #W = -0.00089
 print W
-
 
 
 ax1=fig.add_subplot(211)
