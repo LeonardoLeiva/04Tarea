@@ -101,10 +101,10 @@ class Planeta(object):
         k4_vy = dt* vy4
 
         x, y, vx, vy = self.y_actual
-        xn = x + (k1_x + 2* k2_x + 2* k3_x + k4_x)
-        yn = y + (k1_y + 2* k2_y + 2* k3_y + k4_y)
-        vxn = vx + (k1_vx + 2* k2_vx + 2* k3_vx + k4_vx)
-        vyn = vy + (k1_vy + 2* k2_vy + 2* k3_vy + k4_vy)
+        xn = x + (k1_x + 2* k2_x + 2* k3_x + k4_x)/6.
+        yn = y + (k1_y + 2* k2_y + 2* k3_y + k4_y)/6.
+        vxn = vx + (k1_vx + 2* k2_vx + 2* k3_vx + k4_vx)/6.
+        vyn = vy + (k1_vy + 2* k2_vy + 2* k3_vy + k4_vy)/6.
         self.y_actual = [xn, yn, vxn, vyn]
         self.t_actual += dt
 
